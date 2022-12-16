@@ -4,7 +4,7 @@ def dataFormat ='json'
 def configFile ='component3.json'
 // 'config/**/Component/*.json'
 def target ='COMPONENT'
-def namePath ="/jenkinsTest/${currentBuild.number}"
+def namePath ="/jenkinsTest/nested/${currentBuild.number}"
 def initCommit=false
 def fnlCommit =true
 def validate =true
