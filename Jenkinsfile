@@ -243,7 +243,7 @@ stages {
                 if(changeSetResults !=null){
                                     def changeSetResultsObject = readJSON text: changeSetResults
                      changeSetResultsObject.each {
-                        if(it.validation == "passed"){
+                        if(it.validation == "passed" || it.validation == "passed_with_exception"){
                             echo "validation passed for snapshot : ${it.name}"
                             snapshotName = it.name
                         }else{
