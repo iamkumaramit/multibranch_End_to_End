@@ -290,7 +290,10 @@ stages {
     stage('Initiate ChangeRequest'){
         steps{
             echo "Devops Change trigger change request"
-            // snDevOpsChange()
+            snDevOpsChange(
+                applicationName:"${appName}",
+                snapshotName: "${snapshotName}"
+            )
         }
 
     }
